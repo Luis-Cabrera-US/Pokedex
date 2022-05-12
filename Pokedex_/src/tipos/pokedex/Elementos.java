@@ -1,0 +1,6 @@
+package tipos.pokedex;
+
+public enum Elementos {
+	GRASS, FIRE, WATER, POISON, FLYING, DRAGON, BUG, NORMAL, ELECTRIC, DARK,
+	PSYCHIC, GROUND, ROCK, ICE, STEEL, FAIRY, FIGHTING, GHOST,NONE
+}
