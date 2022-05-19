@@ -111,9 +111,9 @@ public class Pokedex {
 		
 		
 
-		Comparator<Entry<Object, ?>> cmp = Map.Entry.comparingByValue().reversed();
+
 		Map<Elementos, Long> sortedres = res.entrySet().stream()
-				.sorted(cmp )
+				.sorted(Map.Entry.comparingByValue() )
 				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, 
 						(e1, e2) -> e1, LinkedHashMap::new));
 				
@@ -140,6 +140,26 @@ public class Pokedex {
 	}
 	
 
+	public List<String> ObtenerLineaEvolutivaPokemon(String Name) {
+		
+		List<String> res = null;
+		
+		for(Pokemon P : PokedexNacional) {
+			
+			if(P.getName().equals(Name)) {
+				
+				while(P.getAntecesor() != "NONE") {
+					
+					res.add(P.getName());
+					
+				}
+				
+			}
+		}
+		
+		
+		return res;
+	}
 	
 	
 	@Override

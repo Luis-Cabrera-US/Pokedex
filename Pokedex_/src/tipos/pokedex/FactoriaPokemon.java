@@ -49,6 +49,8 @@ public class FactoriaPokemon {
 		Integer Total = Integer.parseInt(dato[4].trim());
 		Generation Generacion = ParseaGeneration(dato[11].trim().toUpperCase());
 		Boolean Legendary = Boolean.parseBoolean(dato[12].trim());
+		String Antecesor = dato[13].trim();
+		String Predecesor = dato[14].trim();
 
 
 
@@ -57,7 +59,7 @@ public class FactoriaPokemon {
 		
 		
 		return new Pokemon(ID, Name, Type1, Type2, HP, Attack, Defense, Sp_attack, Sp_defense,
-				Speed, Total, Generacion, Legendary);
+				Speed, Total, Generacion, Legendary, Antecesor, Predecesor);
 	}
 	
 	

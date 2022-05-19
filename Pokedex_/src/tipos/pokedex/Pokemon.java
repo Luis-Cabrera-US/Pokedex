@@ -17,10 +17,13 @@ public class Pokemon {
 	private Integer Total;
 	private Generation Generacion;
 	private Boolean Legendary;
+	private String Predecesor;
+	private String Antecesor;
 	
 	public Pokemon(Integer ID, String Name, Elementos Type1, Elementos Type2, 
 			Integer HP, Integer Attack, Integer Defense,Integer Sp_attack, Integer Sp_defense,
-			Integer Speed, Integer Total, Generation Generacion, Boolean Legendary) {
+			Integer Speed, Integer Total, Generation Generacion, Boolean Legendary,
+			String Predecesor, String Antecesor) {
 		// TODO Auto-generated constructor stub
 		
 		this.ID = ID;
@@ -36,6 +39,8 @@ public class Pokemon {
 		this.Total = Total;
 		this.Generacion = Generacion;
 		this.Legendary = Legendary;
+		this.Predecesor = Predecesor;
+		this.Antecesor = Antecesor;
 	}
 
 	public Integer getID() {
@@ -142,12 +147,7 @@ public class Pokemon {
 		Legendary = legendary;
 	}
 
-	public String toString() {
-		return "Pokemon [ ID = " + ID + ", Name = " + Name + ", Type1 = " + Type1 + ", Type2 = " + Type2 + ", HP = " + HP
-				+ ", Attack = " + Attack + ", Defense = " + Defense + ", Sp_attack = " + Sp_attack + ", Sp_defense = "
-				+ Sp_defense + ", Speed = " + Speed + ", Total = " + Total + ", Generacion = " + Generacion + ", Legendary = "
-				+ Legendary + " ]";
-	}
+
 
 	
 	public int hashCode() {
@@ -175,6 +175,30 @@ public class Pokemon {
 		}
 		
 		return res;
+	}
+
+	public String getPredecesor() {
+		return Predecesor;
+	}
+
+	public void setPredecesor(String predecesor) {
+		Predecesor = predecesor;
+	}
+
+	public String getAntecesor() {
+		return Antecesor;
+	}
+
+	public void setAntecesor(String antecesor) {
+		Antecesor = antecesor;
+	}
+
+	@Override
+	public String toString() {
+		return "Pokemon [ID=" + ID + ", Name=" + Name + ", Type1=" + Type1 + ", Type2=" + Type2 + ", HP=" + HP
+				+ ", Attack=" + Attack + ", Defense=" + Defense + ", Sp_attack=" + Sp_attack + ", Sp_defense="
+				+ Sp_defense + ", Speed=" + Speed + ", Total=" + Total + ", Generacion=" + Generacion + ", Legendary="
+				+ Legendary + ", Predecesor=" + Predecesor + ", Antecesor=" + Antecesor + "]";
 	}
 
 }
